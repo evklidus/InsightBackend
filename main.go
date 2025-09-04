@@ -45,10 +45,10 @@ var coursePreviews = []CoursePreview{
 
 var coursePages = []CoursePage{
 	{Id: 1, ImageUrl: "https://media1.popsugar-assets.com/files/thumbor/v8KPX6IRPz1wie9wQvhB4iYTdcw/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2018/07/30/638/n/1922564/8d1b02c5595eaf1f_GettyImages-1007595384/i/Kim-Kardashian-Blue-PVC-Heels-From-Yeezy.jpg", Name: "Пилатес от Веты", Lessons: []Lesson{
-		{Name: "Первый день", VideoUrl: "http://0.0.0.0:8080/videos/0"},
+		{Name: "Первый день", VideoUrl: "http://0.0.0.0:8021/videos/0"},
 	}},
 	{Id: 2, ImageUrl: "https://news.store.rambler.ru/img/dc3b4493acdf7bb2208582027eb15ebd?img-format=auto&img-1-resize=height:355,fit:max&img-2-filter=sharpen", Name: "Mr. Miyagi", Lessons: []Lesson{
-		{Name: "Minor", VideoUrl: "http://0.0.0.0:8080/videos/1"},
+		{Name: "Minor", VideoUrl: "http://0.0.0.0:8021/videos/1"},
 	}},
 }
 
@@ -114,5 +114,5 @@ func main() {
 	})
 	router.GET("/course_pages/:id", getCoursePageById)
 	router.GET("/videos/:num", getVideoById)
-	router.Run() // listen and serve on 0.0.0.0:8080
+	router.Run(":8021") // listen and serve on 0.0.0.0:8021
 }
